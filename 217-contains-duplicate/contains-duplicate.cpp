@@ -3,20 +3,14 @@ public:
     bool containsDuplicate(vector<int>& nums) {
         int n = nums.size();
 
-        unordered_map<int,int> freq;
+        unordered_set<int> hash(nums.begin(),nums.end());
 
-        for(auto num : nums)
+        if(nums.size() == hash.size())
         {
-            freq[num]++;
+            return false;
         }
 
-        for(auto it : freq)
-        {
-            if(it.second != 1)
-            {
-                return true;
-            }
-        }
-        return false;
+       
+        return true;
     }
 };
