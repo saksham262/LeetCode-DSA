@@ -12,12 +12,12 @@ public:
             if(nums[i] > 0)
             {
                 ans[pos] = nums[i];
-                pos = pos + 2;
+                pos += 2;
             }
             if(nums[i] < 0)
             {
                 ans[neg] = nums[i];
-                neg = neg + 2;
+                neg += 2;
             }
         }
 
